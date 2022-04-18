@@ -1,0 +1,19 @@
+@use "sass:meta";
+@use "base/fonts";
+@use "base/themes";
+@use "sass:list";
+@use "sass:string";
+
+$activeTheme: map-get(themes.$themes, "pink");
+
+$background: map-get($activeTheme, "background");
+
+$theme-font: list.nth(fonts.$fonts, 2);
+
+:root {
+  --theme-font: #{meta.inspect($theme-font)};
+
+  @each $color-name, $color-code in $activeTheme {
+    --theme-color-#{$color-name}: #{$color-code};
+  }
+}

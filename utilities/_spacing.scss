@@ -1,0 +1,66 @@
+@use "../base/sizes";
+
+
+@each $name, $value in sizes.$sizes {
+  .p-#{$name} {
+    padding: $value;
+  }
+  .pl-#{$name} {
+    padding-left: $value;
+  }
+  .pt-#{$name} {
+    padding-top: $value;
+  }
+  .pr-#{$name} {
+    padding-right: $value;
+  }
+  .pb-#{$name} {
+    padding-bottom: $value;
+  }
+  .px-#{$name} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py-#{$name} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .m-#{$name} {
+    margin: $value;
+  }
+  .ml-#{$name} {
+    margin-left: $value;
+  }
+  .mt-#{$name} {
+    margin-top: $value;
+  }
+  .mr-#{$name} {
+    margin-right: $value;
+  }
+  .mb-#{$name} {
+    margin-bottom: $value;
+  }
+  .mx-#{$name} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my-#{$name} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+  
+  .space-#{$name} > :not([hidden]) {
+    margin: $value;
+  }
+  .space-x-#{$name} > :not([hidden]) {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .space-y-#{$name} > :not([hidden]) {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}
+
+

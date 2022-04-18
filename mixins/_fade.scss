@@ -1,0 +1,11 @@
+@mixin fade($time, $timingFunction: linear) {
+    transition: opacity $time $timingFunction;
+}
+
+@mixin fade-in() {
+    opacity: 1;
+}
+
+@mixin fade-out() {
+    opacity: 0;
+}
